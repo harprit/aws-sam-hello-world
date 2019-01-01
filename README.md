@@ -2,6 +2,9 @@
 
 This is a Hello World example that can also be used for template as you begin with AWS SAM on Java.
 
+* Shows simplest possible integration of an AWS Lambda function with API Gateway.
+* For a URL of the type /hello/{variable}, the Lambda function returns a response 'hello world' where variable = 'world'.
+
 ### Requirements
 
 AWS SAM Specific -
