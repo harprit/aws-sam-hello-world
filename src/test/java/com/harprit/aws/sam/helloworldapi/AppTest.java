@@ -1,9 +1,9 @@
-package com.harprit.aws.sam.helloworld;
+package com.harprit.aws.sam.helloworldapi;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import com.harprit.aws.sam.helloworld.App.Response;
+import com.harprit.aws.sam.helloworldapi.App.Response;
 
 import junit.framework.TestCase;
 

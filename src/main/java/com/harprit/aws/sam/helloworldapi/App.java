@@ -1,4 +1,4 @@
-package com.harprit.aws.sam.helloworld;
+package com.harprit.aws.sam.helloworldapi;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,10 +14,18 @@ public class App implements RequestHandler<Object, Object> {
 		// analyze request
 		Map<Object, Object> request = (HashMap<Object, Object>) input;
 		Map<String, String> pathParameters = (HashMap<String, String>) request.get("pathParameters");
-		String name = pathParameters.get("name");
+
+		if (pathParameters == null) {
+			System.out.println("Invoked with no event!");
+			return null;
+		}
+		
+		String value = pathParameters.get("name");
+		
+		System.out.printf("Parameter value passed in the event - %s!\n", value);
 
 		// prepare and send back response
-		String message = String.format("Hello %s!\n", name);
+		String message = String.format("Hello %s!\n", value);
 		return new Response(200, message);
 	}
 
