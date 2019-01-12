@@ -12,7 +12,7 @@ public class AppTest extends TestCase {
 	public void testApp() {
 		// prepare test pathParameters
 		Map<String, String> pathParameters = new HashMap<>();
-		pathParameters.put("name", "Ekam");
+		pathParameters.put("name", "World");
 
 		// prepare test Request
 		HashMap<Object, Object> request = new HashMap<>();
@@ -23,7 +23,7 @@ public class AppTest extends TestCase {
 		Response response = (Response) underTest.handleRequest(request, null);
 
 		// check
-		assertEquals("Hello Ekam!", response.getBody());
+		assertEquals("Hello World!\n", response.getBody());
 		assertEquals(200, response.getStatusCode());
 	}
 }

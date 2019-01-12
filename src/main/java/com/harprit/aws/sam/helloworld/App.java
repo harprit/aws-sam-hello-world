@@ -17,7 +17,7 @@ public class App implements RequestHandler<Object, Object> {
 		String name = pathParameters.get("name");
 
 		// prepare and send back response
-		String message = String.format("Hello %s!", name);
+		String message = String.format("Hello %s!\n", name);
 		return new Response(200, message);
 	}
 
